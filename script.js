@@ -48,6 +48,10 @@ $(document).ready(function() {
     message.prepend("<span><strong>Agent user:</strong></span>")
     message.appendTo($('#chat-box'))
     element.remove();
+
+    var scroll=$('#chat-box');
+    scroll.animate({scrollTop: scroll.prop("scrollHeight")});
+
   });
 
   function toggleEditable(element){
