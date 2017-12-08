@@ -1,0 +1,37 @@
+/* Styles go here */
+
+.box-container {
+
+	height: 450px;
+	border-radius: 50px;
+}
+.edit_box_containter{
+	height: 200px;
+}
+
+.box-item {
+	width: 100%;
+	z-index: 1000
+}
+
+.panel{
+	border-radius: 50px;
+	margin-top: 30px;
+}
+.editable{ 
+	background: red;
+}
+
+/*#edit_suggestions{
+	position: relative;
+}
+.edit{
+	position: absolute;
+	top: 19;
+	right: 170;
+}
+.send{
+	position: absolute;
+	top: 19;
+	right: 50;
+}*/

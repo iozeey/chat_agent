@@ -1,0 +1,47 @@
+<html>
+  <head>
+    <title>Chat Agent</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css" />
+    <link rel="stylesheet" href="chat.css" />
+    
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.2.3.min.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/ui/1.11.4/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="https://rawgit.com/jquery/jquery-ui/1-11-stable/external/jquery-simulate/jquery.simulate.js"></script>
+    <script src="script.js"></script>
+    
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-xs-9">
+          <div class="panel panel-default">
+            <div id="droppable" class="panel-body box-container">
+              
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-3">
+          <div class="panel panel-default">
+            <div id="suggestions" class="panel-body box-container">
+              <div id="draggable" itemid="itm-1" class="btn btn-default box-item">Hello There</div>
+              <div id="item_2" itemid="itm-2" class="btn btn-default box-item">i can hep you find your order</div>
+              <div id="item_3" itemid="itm-3" class="btn btn-default box-item">Have a great Day</div>
+              <div id="item_4" itemid="itm-4" class="btn btn-default box-item">Custom Template</div>
+              <div id="item_5" itemid="itm-5" class="btn btn-default box-item">Custom Template</div>
+            </div>
+          </div>
+        </div>
+        <div class="col-xs-9">
+          <div class="panel panel-default">
+            <div id="edit_suggestions" class="panel-body edit_box_containter">
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </body>
+
+</html>
