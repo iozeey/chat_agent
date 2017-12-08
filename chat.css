@@ -2,14 +2,14 @@
 
 .box-container {
 
-	height: 450px;
+	height: 350px;
 	border-radius: 50px;
 }
 .edit_box_containter{
 	height: 200px;
 }
 
-.box-item {
+.draggable-div {
 	width: 100%;
 	z-index: 1000
 }
@@ -19,10 +19,21 @@
 	margin-top: 30px;
 }
 .editable{ 
-	background: red;
+	height: 50px;
 }
-
-/*#edit_suggestions{
+.rowDraggable{
+	border:1px solid red;
+}
+.template-draggable .action{
+	display: none;
+}
+.template-dragged .action{
+	display: inline;
+}
+.p-0{
+	padding: 0;
+}
+/* #edit_suggestions{
 	position: relative;
 }
 .edit{
