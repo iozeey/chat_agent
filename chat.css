@@ -4,8 +4,13 @@
 }
 .edit_box_containter{
 	height: 200px;
-}
 
+}
+.border_less{
+	border: none !important;
+	-webkit-box-shadow: 0 0 0 rgba(0,0,0,.0) !important; 
+    box-shadow: 0 0 0 rgba(0,0,0,.0) !important; 
+}
 .draggable-div {
 	width: 100%;
 	z-index: 1000
@@ -14,8 +19,8 @@
 .panel{
 	margin-top: 30px;
 }
-.editable{ 
-	height: 50px;
+.editable{
+	height: 30px;
 }
 .rowDraggable{
 	border:1px solid red;
@@ -35,16 +40,3 @@
 	overflow-y: scroll;
 	height: 350px;
 }
-/* #edit_suggestions{
-	position: relative;
-}
-.edit{
-	position: absolute;
-	top: 19;
-	right: 170;
-}
-.send{
-	position: absolute;
-	top: 19;
-	right: 50;
-}*/
