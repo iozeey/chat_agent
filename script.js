@@ -47,6 +47,9 @@ $(document).ready(function() {
     var message = element.children('p').clone();
     message.prepend("<span><strong>Agent user:</strong></span>")
     message.appendTo($('#chat-box'))
+    $('#chat-box').append($('<p>').text('Bob Smith:Hi'))
+    // $('#chat-box').add($('#bob_smith'))
+    // $('#bob_smith').appendTo($('#chat-box'))
     element.remove();
 
     var scroll=$('#chat-box');
