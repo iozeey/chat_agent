@@ -12,6 +12,7 @@ $(document).ready(function() {
        ui.helper.data('originalPosition',ui.position);
       $(ui.helper).removeClass('template-draggable');
       $(ui.helper).addClass('template-dragged');
+      $('#button_send').show();
     }
   });
   
@@ -31,6 +32,7 @@ $(document).ready(function() {
     element.addClass('template-draggable');
 
     element.children('p').text(element.children('p').data('old_text'));
+    $('#button_send').hide();
   });
      
   $(document).on('click','.edit',function(e){
@@ -43,8 +45,16 @@ $(document).ready(function() {
   });  
 
   $(document).on('click','.send',function(e){
-    var element = $(this).closest('.template-container');
-    var message = element.children('p').clone();
+    var message;
+    var element = $("[class*='template-dragged']");
+    if(element.length == 1){
+      message = element.children('p').clone();
+    }else{
+      for(var i = 0; i< element.length; i++ ){
+          message = ($(element[i]).children('p').clone())
+          // message.add(($(element[i]).children('p').clone()));
+        }
+    }
     message.prepend("<span><strong>Agent: </strong></span>")
     message.appendTo($('#chat-box'))
     // $('#chat-box').append($('<p>').text('Bob Smith: Hi').css("font-weight", "bold"))
@@ -53,7 +63,7 @@ $(document).ready(function() {
 
     var scroll=$('#chat-box');
     scroll.animate({scrollTop: scroll.prop("scrollHeight")});
-
+    $('#button_send').hide();
   });
 
   function toggleEditable(element){
