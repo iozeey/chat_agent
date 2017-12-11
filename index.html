@@ -13,52 +13,51 @@
   <body>
     <div class="container-fluid">
       <div class="row">
-        <div class="col-xs-9">
+        <div class="col-xs-4">
+        <h2 class="text-center">Chat Box</h2>
           <div class="panel panel-default">
             <div id="chat-box" class="panel-body box-container">
               <p id="bob_smith"><span><strong>Bob Smith:</strong></span>Hi</p>
             </div>
           </div>
         </div>
-        <div class="col-xs-3">
-          <div class="panel panel-default border_less">
-            <div id="suggestions" class="panel-body box-container">
-              <span class="btn btn-default draggable-div template-draggable template-container p-0">
-                <p>Hello There</p>
-                <div class="action">
-                <span class="edit"><input type="button" value="Edit"/></span>
-                <span class="cancel"><input type="button" value="Cancel"/></span>
-                <!-- <span class="send"><input type="button" value="Send"/></span> -->
-                </div> <span class='undo' style='display:none'>x</span>
-              </span>
-               <span class="btn btn-default draggable-div template-draggable template-container p-0">
-                <p>I can hep you find your order</p>
-                <div class="action">
-                <span class="edit"><input type="button" value="Edit"/></span>
-                <span class="cancel"><input type="button" value="Cancel"/></span>
-                <!-- <span class="send"><input type="button" value="Send"/></span> -->
-                </div>
-              </span>
-              <span class="btn btn-default draggable-div template-draggable template-container p-0">
-                <p>Have a great Day</p>
-                <div class="action">
-                <span class="edit"><input type="button" value="Edit"/></span>
-                <span class="cancel"><input type="button" value="Cancel"/></span>
-                <!-- <span class="send"><input type="button" value="Send"/></span> -->
-                </div>
-              </span>             
-            </div>
-          </div>
-        </div>
-        <div class="col-xs-9">
+        <div class="col-xs-4">
+        <h2 class="text-center">Staging</h2>
           <div class="panel panel-default">
             <div id="staging-box" class="panel-body edit_box_containter">
                 <span class="send"><input type="button" value="Send" id="button_send" style="display: none" /></span>
             </div>
           </div>
         </div>
+        <div class="col-xs-4">
+        <h2 class="text-center">Templates</h2> 
+          <div class="panel panel-default border_less">
+            <div id="suggestions" class="panel-body box-container">
+              <span class="btn btn-default draggable-div template-draggable template-container p-0 span_width">
+                <span>Hello There </span> <br>
+                <div class="action">
+                <span class="edit"><input type="button" value="Edit"/></span>
+                <span class="cancel"><input type="button" value="Cancel"/></span>
+                </div> <span class='undo' style='display:none'>x</span>
+              </span>
+               <span class="btn btn-default draggable-div template-draggable template-container p-0 span_width">
+                <span>I can help you find your order </span> <br>
+                <div class="action">
+                <span class="edit"><input type="button" value="Edit"/></span>
+                <span class="cancel"><input type="button" value="Cancel"/></span>
+                </div>
+              </span>
+              <span class="btn btn-default draggable-div template-draggable template-container p-0 span_width">
+                <span>Have a great Day </span><br>
+                <div class="action">
+                <span class="edit"><input type="button" value="Edit"/></span>
+                <span class="cancel"><input type="button" value="Cancel"/></span>
+                </div>
+              </span>             
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-
   </body>
 </html>

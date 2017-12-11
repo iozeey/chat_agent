@@ -3,7 +3,7 @@
 .box-container {
 }
 .edit_box_containter{
-	height: 200px;
+	height: 350px;
 
 }
 .border_less{
@@ -44,10 +44,13 @@
 	background-color: yellow;
 }
 #button_send{
-	height: 56px;
+	height: 36px;
     position: absolute;
-    right: 45px;
-    top: 60px;
-    width: 100px;
-    font-size: 30px
+    right: 170px;
+    bottom: 40px;
+    width: 80px;
+    font-size: 20px
+}
+.span_width{
+	height: 50px !important;
 }

@@ -32,7 +32,10 @@ $(document).ready(function() {
     element.addClass('template-draggable');
 
     element.children('p').text(element.children('p').data('old_text'));
-    $('#button_send').hide();
+    var element = $("[class*='template-dragged']");
+    if(element.length == 0){
+      $('#button_send').hide();
+    }
   });
      
   $(document).on('click','.edit',function(e){
@@ -48,15 +51,19 @@ $(document).ready(function() {
     var message;
     var element = $("[class*='template-dragged']");
     if(element.length == 1){
-      message = element.children('p').clone();
+      message = element.children('span').clone();
+      message.prepend($("<span><strong>Agent: </strong></span>"));
+      message.appendTo($('#chat-box'))
     }else{
       for(var i = 0; i< element.length; i++ ){
-          message = ($(element[i]).children('p').clone())
-          // message.add(($(element[i]).children('p').clone()));
+          message= ($(element[i]).children('span').clone());
+          if(i == 0){
+              message.prepend($("<span><strong>Agent: </strong></span>"))
+          }
+          message.appendTo($('#chat-box'))
         }
     }
-    message.prepend("<span><strong>Agent: </strong></span>")
-    message.appendTo($('#chat-box'))
+    // message.prepend()
     // $('#chat-box').append($('<p>').text('Bob Smith: Hi').css("font-weight", "bold"))
     $('#chat-box').append($('<p>').prepend("<span><strong>Bob Smith:</strong> Hi </span>"))
     element.remove();
@@ -67,8 +74,8 @@ $(document).ready(function() {
   });
 
   function toggleEditable(element){
-    var isEditable = element.children('p').is('.editable');
-    element.children('p').prop('contenteditable',!isEditable).toggleClass('editable');
+    var isEditable = element.children('span').is('.editable');
+    element.children('span').prop('contenteditable',!isEditable).toggleClass('editable');
   }
 
   function revertDraggable($selector) {
